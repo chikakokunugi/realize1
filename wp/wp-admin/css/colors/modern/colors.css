@@ -1,0 +1,34 @@
+/*
+Error: Invalid CSS after "$link-focus: color": expected selector or at-rule, was ".adjust($highli..."
+        on line 10 of /Users/chikakokunugi/Documents/GitHub/realize1/wp/wp-admin/css/colors/modern/colors.scss
+
+5: $highlight-color: #3858e9;
+6: $menu-submenu-focus-text: #33f078;
+7: $notification-color: $highlight-color;
+8: 
+9: $link: $highlight-color;
+10: $link-focus: color.adjust($highlight-color, $lightness: -10%);
+11: 
+12: $custom-welcome-panel: "false";
+13: 
+14: @import "../_admin.scss";
+
+Backtrace:
+/Users/chikakokunugi/Documents/GitHub/realize1/wp/wp-admin/css/colors/modern/colors.scss:10
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/scss/parser.rb:42:in `parse'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/engine.rb:290:in `render'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:396:in `run'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/bin/sass:34:in `load'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/bin/sass:34:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"$link-focus: color\": expected selector or at-rule, was \".adjust($highli...\"\A         on line 10 of /Users/chikakokunugi/Documents/GitHub/realize1/wp/wp-admin/css/colors/modern/colors.scss\A \A 5: $highlight-color: #3858e9;\A 6: $menu-submenu-focus-text: #33f078;\A 7: $notification-color: $highlight-color;\A 8: \A 9: $link: $highlight-color;\A 10: $link-focus: color.adjust($highlight-color, $lightness: -10%);\A 11: \A 12: $custom-welcome-panel: \"false\";\A 13: \A 14: @import \"../_admin.scss\";"; }

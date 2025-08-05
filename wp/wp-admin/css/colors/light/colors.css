@@ -1,0 +1,35 @@
+/*
+Error: Invalid CSS after "...accent-2: color": expected selector or at-rule, was ".adjust(color.a..."
+        on line 24 of /Users/chikakokunugi/Documents/GitHub/realize1/wp/wp-admin/css/colors/light/colors.scss
+
+19: 
+20: $menu-collapse-text: #777;
+21: $menu-collapse-focus-icon: #555;
+22: 
+23: $dashboard-accent-1: $highlight-color;
+24: $dashboard-accent-2: color.adjust(color.adjust($highlight-color, $lightness: 7%), $saturation: -15%);
+25: $dashboard-icon-background: $text-color;
+26: 
+27: @import "../_admin.scss";
+28: 
+29: /* Override the theme filter highlight color for this scheme *\/
+
+Backtrace:
+/Users/chikakokunugi/Documents/GitHub/realize1/wp/wp-admin/css/colors/light/colors.scss:24
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/scss/parser.rb:42:in `parse'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/engine.rb:290:in `render'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:396:in `run'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/bin/sass:34:in `load'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/bin/sass:34:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...accent-2: color\": expected selector or at-rule, was \".adjust(color.a...\"\A         on line 24 of /Users/chikakokunugi/Documents/GitHub/realize1/wp/wp-admin/css/colors/light/colors.scss\A \A 19: \A 20: $menu-collapse-text: #777;\A 21: $menu-collapse-focus-icon: #555;\A 22: \A 23: $dashboard-accent-1: $highlight-color;\A 24: $dashboard-accent-2: color.adjust(color.adjust($highlight-color, $lightness: 7%), $saturation: -15%);\A 25: $dashboard-icon-background: $text-color;\A 26: \A 27: @import \"../_admin.scss\";\A 28: \A 29: /* Override the theme filter highlight color for this scheme */"; }

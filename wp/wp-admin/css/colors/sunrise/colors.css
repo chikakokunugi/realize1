@@ -1,0 +1,32 @@
+/*
+Error: Invalid CSS after "...cus-text: color": expected selector or at-rule, was ".adjust($highli..."
+        on line 7 of /Users/chikakokunugi/Documents/GitHub/realize1/wp/wp-admin/css/colors/sunrise/colors.scss
+
+2: 
+3: $scheme-name: "sunrise";
+4: $base-color: #cf4944;
+5: $highlight-color: #dd823b;
+6: $notification-color: #ccaf0b;
+7: $menu-submenu-focus-text: color.adjust($highlight-color, $lightness: 35%);
+8: 
+9: @import "../_admin.scss";
+
+Backtrace:
+/Users/chikakokunugi/Documents/GitHub/realize1/wp/wp-admin/css/colors/sunrise/colors.scss:7
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/scss/parser.rb:42:in `parse'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/engine.rb:290:in `render'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:396:in `run'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/rubygems/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/bin/sass:34:in `load'
+/Applications/Adobe Dreamweaver 2021/Adobe Dreamweaver 2021.app/Contents/Resources/gems/bin/sass:34:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...cus-text: color\": expected selector or at-rule, was \".adjust($highli...\"\A         on line 7 of /Users/chikakokunugi/Documents/GitHub/realize1/wp/wp-admin/css/colors/sunrise/colors.scss\A \A 2: \A 3: $scheme-name: \"sunrise\";\A 4: $base-color: #cf4944;\A 5: $highlight-color: #dd823b;\A 6: $notification-color: #ccaf0b;\A 7: $menu-submenu-focus-text: color.adjust($highlight-color, $lightness: 35%);\A 8: \A 9: @import \"../_admin.scss\";"; }
