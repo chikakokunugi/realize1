@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^(www\.)?k2design\.daa\.jp$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^(www\.)?realize-archit\.jp$ [NC]
+RewriteRule ^(.*)$ https://realize1-archit.jp/$1 [R=301,L]
