@@ -1,0 +1,400 @@
+  <?php get_header(); ?>
+<style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+  .blue-section img {
+  	max-width: 100%;
+ 	 height: auto;
+ 	 width: auto;
+  display: block;
+  margin: 0 auto;
+  height: auto;
+	}
+    
+    section {
+      padding: 40px 0;
+    }
+    section.message {
+      background-color: #ffffff;
+      padding: 80px 20px;
+      text-align: center;
+    }
+  .blue-section img {
+  	max-width: 100%;
+ 	 height: auto;
+ 	 width: auto;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+	}
+    
+    .message img {
+      max-width: 100%;
+      height: auto;
+      width: 300px;
+    }
+
+    section.blue-section {
+      background-color: ;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+
+
+ .slidein-container {
+  position: relative;
+  z-index: 1; /* ← 手前に出す */
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+    .slidein-block {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: all 0.8s ease-out;
+    }
+
+    .slidein-block.in-view {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .slidein-block img {
+      height: auto;
+      display: block;
+    }
+.js-fade {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+.js-slide-right {
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+  
+
+    .site-footer {
+      background: #00B9EF;
+      color: white;
+      position: relative;
+      z-index: 1;
+      padding: 50px 20px 160px;
+margin-top:50px;
+    }
+
+    .footer-inner {
+      max-width: 750px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-box {
+      flex: 1;
+      text-align: center;
+    }
+
+.business-section {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 60px 20px 0px;
+color: #999;
+}
+
+.business-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.business-item {
+  flex: 1 1 45%;
+  text-align: center;
+}
+
+.business-title {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.business-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .business-item {
+    flex: 1 1 100%;
+  }
+}
+
+.responsive-text {
+  font-size: 1.4em;
+  line-height: 1.8;
+  color: #333;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .responsive-text {
+    font-size: 1em;
+    line-height: 1.6;
+  }
+.slidein-container {
+padding: 0;
+}
+}
+
+.flow-section {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.flow-section h2 {
+  margin-bottom: 40px;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #666;
+}
+
+.flow-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flow-step {
+  background-color: #0082CD;
+  color: white;
+  padding: 15px 30px;
+  margin: 10px 0;
+  font-size: 1.2em;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.arrow {
+  width: 20px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .flow-step {
+    font-size: 1em;
+    padding: 12px 20px;
+    max-width: 100%;
+  }
+
+  .arrow {
+    width: 16px;
+  }
+}
+
+  </style>
+  <header >
+ <img src="https://realize1-archit.jp/business_1.png" alt="会社ロゴ" style="width:100%">
+   <div class="hamburger" id="hamburger">
+    <div class="bar">
+    </div>
+    <div class="bar">
+    </div>
+    <div class="bar">
+    </div>
+    <div class="bar">
+    </div>
+    <span>
+     INDEX
+    </span>
+   </div>
+    <nav class="nav-menu" id="navMenu">
+    <div class="close-btn" id="closeBtn">
+     ×
+    </div>
+    <ul>
+     <li>
+      <a href="<?php echo home_url('/'); ?>">
+       トップ
+      </a>
+     </li>
+     <li>
+      <a href="<?php echo home_url('/philosophy/'); ?>">
+       私たちの想い
+      </a>
+     </li>
+     <li>
+      <a href="<?php echo home_url('/business/'); ?>">
+       業務内容
+      </a>
+     </li>
+     <li>
+      <a href="<?php echo home_url('/company/'); ?>">
+       会社概要
+      </a>
+     </li>
+		    <li>
+      <a href="<?php echo home_url('/record/'); ?>">
+       施工実績
+      </a>
+     </li>
+     <li>
+      <a href="https://realize1-archit.jp/contact.php">
+       お問い合わせ
+      </a>
+     </li>
+     <li>
+      <a href="<?php echo home_url('/privacy-policy/'); ?>">
+       プライバシーポリシー
+      </a>
+     </li>
+    </ul>
+   </nav>
+  </header>
+  <section class="blue-section">
+  <div class="slidein-container">
+    <div class="slidein-block js-fade">
+ <img src="https://realize1-archit.jp/business_3.png" alt="会社ロゴ" >
+
+    </div>
+  </div>
+  </section>
+
+<section class="business-section">
+  <div class="business-container">
+    <div class="business-item">
+      <p class="business-title">［ 大規模修繕・改修工事 ］</p>
+      <img src="https://realize1-archit.jp/business-left1.png" alt="大規模修繕・改修工事">
+    </div>
+    <div class="business-item">
+      <p class="business-title">［ リフォーム ］</p>
+      <img src="https://realize1-archit.jp/business-right1.png" alt="リフォーム">
+    </div>
+  </div>
+</section>
+
+
+<section class="blue-section" style="padding-top: 0px; padding-bottom:50px;">
+  <div class="slidein-container">
+    <div class="slidein-block js-slide-right">
+      <p class="responsive-text">
+    建物の老朽化や劣化を防ぎ、資産価値を維持・向上させるために、計画的に行う工事。外壁補修、防水工事、鉄部塗装、設備改修などを行います。
+  </p>
+    </div>
+  </div>
+</section>
+ 
+
+<section class="flow-section">
+  <h2>［ 工事の流れ ］</h2>
+  <div class="flow-container">
+    <div class="flow-step">ご依頼</div>
+    <img src="https://realize1-archit.jp/mark.png" alt="矢印" class="arrow" />
+    <div class="flow-step">内容調査（お打ち合わせ）</div>
+    <img src="https://realize1-archit.jp/mark.png" alt="矢印" class="arrow" />
+    <div class="flow-step">お見積</div>
+    <img src="https://realize1-archit.jp/mark.png" alt="矢印" class="arrow" />
+    <div class="flow-step">プレゼンテーション</div>
+    <img src="https://realize1-archit.jp/mark.png" alt="矢印" class="arrow" />
+    <div class="flow-step">ご契約</div>
+    <img src="https://realize1-archit.jp/mark.png" alt="矢印" class="arrow" />
+    <div class="flow-step">完工（お引き渡し）</div>
+    <img src="https://realize1-archit.jp/mark.png" alt="矢印" class="arrow" />
+    <div class="flow-step">メンテナンス・サポート</div>
+  </div>
+</section>
+
+  <footer class="site-footer">
+   <img alt="背景ロゴ" class="footer-bg" src="https://realize1-archit.jp/アセット 1.png"/>
+   <div class="footer-inner">
+   
+    <div class="footer-box">
+     <img alt="access icon" class="footer-icon" src="https://realize1-archit.jp/f-access.png"/>
+     <div class="footer-label">
+      ACCESS
+     </div>
+     <div class="footer-text">
+      〒650-0034
+      <br/>
+      神戸市中央区京町80
+      <br/>
+      クリエイト神戸 3F
+     </div>
+    </div>
+    <div class="footer-box"><a href="contact.php" style="color:white; text-decoration:none;">
+     <img alt="contact icon" class="footer-icon" src="https://realize1-archit.jp/f-mail.png"/>
+     <div class="footer-label">
+      CONTACT US
+     </div>
+     <div class="footer-text">
+      お問い合わせ
+     </div></a>
+    </div>
+   </div>
+  </footer>
+ 
+  <script>
+   const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
+const closeBtn = document.getElementById("closeBtn");
+
+hamburger.addEventListener("click", () => {
+  navMenu.classList.add("open");
+});
+
+closeBtn.addEventListener("click", () => {
+  navMenu.classList.remove("open");
+});
+  </script>
+<script>
+  $(function () {
+    function showOnScroll() {
+      // 左から
+      $('.js-fade').each(function () {
+        const elemTop = $(this).offset().top;
+        const scroll = $(window).scrollTop();
+        const windowHeight = $(window).height();
+        if (scroll + windowHeight > elemTop + 50) {
+          $(this).css({
+            opacity: 1,
+            transform: 'translateX(0)',
+            transition: 'all 0.8s ease-out'
+          });
+        }
+      });
+
+      // 右から
+      $('.js-slide-right').each(function () {
+        const elemTop = $(this).offset().top;
+        const scroll = $(window).scrollTop();
+        const windowHeight = $(window).height();
+        if (scroll + windowHeight > elemTop + 50) {
+          $(this).css({
+            opacity: 1,
+            transform: 'translateX(0)',
+            transition: 'all 0.8s ease-out'
+          });
+        }
+      });
+    }
+
+    $(window).on('scroll load', showOnScroll);
+  });
+</script>
+
+
+<?php get_footer(); ?>

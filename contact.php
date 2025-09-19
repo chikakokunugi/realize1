@@ -258,18 +258,18 @@ color: #555;
     <nav class="nav-menu" id="navMenu">
       <div class="close-btn" id="closeBtn">×</div>
       <ul>
-        <li><a href="index.html">トップ</a></li>
-        <li><a href="philosophy.html">私たちの想い</a></li>
-        <li><a href="business.html">業務内容</a></li>
-        <li><a href="company.html">会社概要</a></li>
+        <li><a href="https://realize1-archit.jp/wp/">トップ</a></li>
+        <li><a href="https://realize1-archit.jp/wp/philosophy">私たちの想い</a></li>
+        <li><a href="https://realize1-archit.jp/wp/business">業務内容</a></li>
+        <li><a href="https://realize1-archit.jp/wp/company">会社概要</a></li>
 		      <li>
-      <a href="record.html">
+      <a href="https://realize1-archit.jp/wp/record">
        施工実績
       </a>
      </li>
-        <li><a href="contact.php">お問い合わせ</a></li>
+        <li><a href="https://realize1-archit.jp/contact.php">お問い合わせ</a></li>
 		       <li>
-      <a href="privacy-policy.html">
+      <a href="https://realize1-archit.jp/wp/privacy-policy">
        プライバシーポリシー
       </a>
      </li>

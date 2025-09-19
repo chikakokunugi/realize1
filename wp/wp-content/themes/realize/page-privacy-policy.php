@@ -1,0 +1,492 @@
+<?php get_header(); ?>
+<style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Noto Sans JP', sans-serif;
+      background-color: #fff;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      color: #333;
+		line-height: 1.8;
+
+    }
+
+    h2 {
+      color: #0081cc;
+	 line-height: 1.8;
+    }
+
+    h1 {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 30px;
+		line-height: 1.8;
+color: #333;
+    }
+
+    h2 {
+      font-size: 16px;
+      margin-top: 40px;
+margin-bottom:0;
+      padding-bottom: 5px;
+    }
+
+    .container ul {
+     padding-left: 0em;
+    }
+
+     .container ul li {
+      margin-bottom: 10px;
+		line-height: 1.8;
+list-style: none;
+text-indent: -40px; 
+  padding-left: 40px; 
+    }
+
+     .container ul li  span{
+color:#0081cc;
+		line-height: 1.8;
+    }
+
+
+    .section-title {
+      font-weight: bold;
+      color: #0081cc;
+    }
+
+    .contact {
+      margin-top: 50px;
+    }
+
+    .contact p {
+      margin: 5px 0;
+
+    }
+
+    address {
+      font-style: normal;
+      white-space: pre-wrap;
+    }
+  .blue-section img {
+  	max-width: 100%;
+ 	 height: auto;
+ 	 width: auto;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+	}
+    
+    section {
+      padding: 40px 0;
+    }
+    section.message {
+      background-color: #ffffff;
+      padding: 80px 20px;
+      text-align: center;
+    }
+  .blue-section img {
+  	max-width: 100%;
+ 	 height: auto;
+ 	 width: auto;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+	}
+    
+    .message img {
+      max-width: 100%;
+      height: auto;
+      width: 300px;
+    }
+
+    section.blue-section {
+      background-color: ;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+
+
+ .slidein-container {
+  position: relative;
+  z-index: 1; /* ← 手前に出す */
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 20px;
+	 	
+}
+	
+		
+    .slidein-block {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: all 0.8s ease-out;
+    }
+
+    .slidein-block.in-view {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .slidein-block img {
+      height: auto;
+      display: block;
+    }
+.js-fade {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+.js-slide-right {
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+  
+
+    .site-footer {
+      background: #00B9EF;
+      color: white;
+      position: relative;
+      z-index: 1;
+      padding: 100px 20px 160px;
+margin-top:200px;
+    }
+
+    .footer-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-box {
+      flex: 1;
+      text-align: center;
+    }
+
+.contact-form {
+  max-width: 700px;
+  margin: 0 auto;
+  font-family: sans-serif;
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form-row label {
+  width: 160px;
+  font-weight: normal;
+}
+
+.form-row .required {
+  color: red;
+  margin-left: 5px;
+}
+
+.form-row input,
+.form-row textarea {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* レスポンシブ対応：スマホ時は縦並び */
+@media screen and (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-row label {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .form-row input,
+  .form-row textarea {
+    width: 100%;
+  }
+}
+
+.company-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: sans-serif;
+  color: #666;
+display: block;
+width: 550px;
+margin: 0 auto;
+}
+
+/* 上の太線（社名の上） */
+.company-table tr:first-child {
+  border-top: 1px solid #231815;
+}
+
+/* 横の区切り線（細い） */
+.company-table tr {
+  border-bottom: 1px solid #ccc;
+}
+
+/* 最下部の濃い横線 */
+.company-table tr:last-child {
+  border-bottom: 1px solid #231815;
+}
+
+/* 左列の縦線（太い） */
+.company-table th {
+  border-right: 1px solid #231815;
+  width: 120px;
+  text-align: left;
+  padding: 15px;
+  text-align-last:justify ;
+  font-weight: normal!important;
+  
+}
+
+/* 右列（縦線なし） */
+.company-table td {
+text-align: left;
+  border-right: none;
+    padding: 15px;
+}
+
+/* テーブル外枠など他の線を非表示に */
+.company-table,
+.company-table * {
+  border-top: none;
+  border-left: none;
+}
+
+@media (max-width: 550px) {
+  .company-table {
+    width: 100%;
+  }
+
+  .company-table th,
+  .company-table td {
+    display: table-cell; /* ← 横並びを保つ */
+    width: auto;
+    word-break: break-word; /* 長い単語がはみ出さないように */
+padding: 10px 5px;
+font-size: 12px;
+  }
+
+  .company-table tr {
+    display: table-row;
+  }
+}
+  </style>
+
+
+  </style>
+  <header >
+ <img src="https://realize1-archit.jp/company04.png" alt="会社ロゴ" style="width:100%">
+   <div class="hamburger" id="hamburger">
+    <div class="bar">
+    </div>
+    <div class="bar">
+    </div>
+    <div class="bar">
+    </div>
+    <div class="bar">
+    </div>
+    <span>
+     INDEX
+    </span>
+   </div>
+   <nav class="nav-menu" id="navMenu">
+    <div class="close-btn" id="closeBtn">
+     ×
+    </div>
+<ul>
+     <li>
+      <a href="<?php echo home_url('/'); ?>">
+       トップ
+      </a>
+     </li>
+     <li>
+      <a href="<?php echo home_url('/philosophy/'); ?>">
+       私たちの想い
+      </a>
+     </li>
+     <li>
+      <a href="<?php echo home_url('/business/'); ?>">
+       業務内容
+      </a>
+     </li>
+     <li>
+      <a href="<?php echo home_url('/company/'); ?>">
+       会社概要
+      </a>
+     </li>
+		    <li>
+      <a href="<?php echo home_url('/record/'); ?>">
+       施工実績
+      </a>
+     </li>
+     <li>
+      <a href="https://realize1-archit.jp/contact.php">
+       お問い合わせ
+      </a>
+     </li>
+     <li>
+      <a href="<?php echo home_url('/privacy-policy/'); ?>">
+       プライバシーポリシー
+      </a>
+     </li>
+    </ul>
+   </nav>
+  </header>
+<section>
+  <div class="container">
+    <h1>個人情報の取り扱いについて</h1>
+
+    <p>
+株式会社 REALiZE1（以下、「弊社」という。）では、お客様に信頼いただくため、お客様に関する個人情報の重要性を認識し、厳重に管理しています。「個人情報の保護に関する法律」及びその他関連法令等を遵守し、以下の方針に基づき個人情報の保護に努めています。    </p>
+
+    <h2>【個人情報の収集】</h2>
+    <p>
+弊社をご利用賜りますお客様からご提供いただいた個人情報については、以下の考え方に沿って、適正な利用・管理を行い、情報の正確性・機密性の保持に努めます。    </p>
+
+    <ul>
+      <li><span class="section-title">（1）個人情報の収集</span><br>
+弊社をご利用賜りますお客様の会社名・住所・電話番号等の法人企業情報が主で、個人情報につきましては電話・ＦＡＸ・メールアドレスなど、電子通信機器を用いて情報の収集をさせて頂きます。      </li>
+      <li><span class="section-title">（2）個人情報の管理</span><br>
+収集させていただいた個人情報は弊社内で厳重な管理を行い、外部からの不正アクセスまたは紛失・破壊・改ざん等が起こらないように安全管理措置を講じます。 万一そうした事態が発生した場合は、速やかな再発防止に努めるとともに、安全管理措置の改善をはかります。      </li>
+    </ul>
+
+    <h2>【個人情報の利用】</h2>
+    <p>
+弊社が収集した個人情報は、お客様との商取引・お客様とのご連絡（電話・郵便・電子メール）をするために利用させていただき、個人情報の利用目的以外には利用いたしません。ただし、以下の場合を除きます。    </p>
+
+    <ul>
+      <li><span>（1）法令に基づく場合</span></li>
+      <li><span>（2）人の生命・身体または財産の保護のために必要がある場合であって、本人の同意を得ることが困難であるとき</span></li>
+      <li><span>（3）公衆衛生の向上、または児童の健全な育成の推進のために特に必要がある場合であって、本人の同意を得ることが困難であるとき</span></li>
+      <li><span>（4）国の機関もしくは地方公共団体またはその委託を受けたものが法令の定める事務を遂行することに対して協力する必要があって、本人の同意を得ることにより当該事務遂行に支障をおよぼすおそれがあるとき</span></li>
+    </ul>
+
+    <h2>【個人情報の提供】</h2>
+    <p>
+当社ではお客様の個人情報を、お客様の同意なく、機密保持契約を締結している業務委託先以外の第三者に閲覧・提供させていただくことはありません。ただし、以下の場合は、個人情報を開示・提供させていただくことがあります。    </p>
+
+    <ul>
+      <li><span>（1）法令に基づく場合</span></li>
+      <li><span>（2）事前にお客様の同意を得た場合</span></li>
+      <li><span>（3）業務委託先に、利用目的達成のため必要な範囲内で、開示する場合</span></li>
+    </ul>
+
+    <h2>【お客様からの開示・訂正・中止のご請求】</h2>
+    <p>
+      お客様からご自身に関する情報について情報開示のご依頼があった場合、請求者がご本人であることを確認させていただいたうえ、特別な理由がない限りお答えさせていただきます。また、お客様に関する情報が不正確である場合は、正確なものに変更させていただきます。<br>
+弊社内でのお客様の個人情報の共有につきましては、お客様がご希望されない場合は取扱いを中止させていただきます。
+    </p>
+
+    <h2>【変更】</h2>
+    <p>
+プライバシーポリシーに関して、適宜見直し改善してまいります。重要な変更がある場合は、弊社の判断する方法で通知させていただきます。    </p>
+
+    <div class="contact">
+      <p>◎お問い合わせ<br>
+弊社の個人情報の取り扱いに関するお問い合わせは下記までご連絡ください。<br><br>
+株式会社REALiZE１<br>
+個人情報管理責任者 山田 一人<br>
+E*mail : info@realize1-archit.jp</p>
+    </div>
+  </div>
+</section>
+
+  <footer class="site-footer">
+   <img alt="背景ロゴ" class="footer-bg" src="https://realize1-archit.jp/アセット 1.png"/>
+   <div class="footer-inner">
+    <div class="footer-box">
+     <img alt="access icon" class="footer-icon" src="https://realize1-archit.jp/f-access.png"/>
+     <div class="footer-label">
+      ACCESS
+     </div>
+     <div class="footer-text">
+      〒650-0034
+      <br/>
+      神戸市中央区京町80
+      <br/>
+      クリエイト神戸 3F
+     </div>
+    </div>
+    <div class="footer-box"><a href="contact.php" style="color:white; text-decoration:none;">
+     <img alt="contact icon" class="footer-icon" src="https://realize1-archit.jp/f-mail.png"/>
+     <div class="footer-label">
+      CONTACT US
+     </div>
+     <div class="footer-text">
+      お問い合わせ
+     </div></a>
+    </div>
+   </div>
+  </footer>
+ 
+  <script>
+   const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
+const closeBtn = document.getElementById("closeBtn");
+
+hamburger.addEventListener("click", () => {
+  navMenu.classList.add("open");
+});
+
+closeBtn.addEventListener("click", () => {
+  navMenu.classList.remove("open");
+});
+  </script>
+<script>
+  $(function () {
+    function showOnScroll() {
+      // 左から
+      $('.js-fade').each(function () {
+        const elemTop = $(this).offset().top;
+        const scroll = $(window).scrollTop();
+        const windowHeight = $(window).height();
+        if (scroll + windowHeight > elemTop + 50) {
+          $(this).css({
+            opacity: 1,
+            transform: 'translateX(0)',
+            transition: 'all 0.8s ease-out'
+          });
+        }
+      });
+
+      // 右から
+      $('.js-slide-right').each(function () {
+        const elemTop = $(this).offset().top;
+        const scroll = $(window).scrollTop();
+        const windowHeight = $(window).height();
+        if (scroll + windowHeight > elemTop + 50) {
+          $(this).css({
+            opacity: 1,
+            transform: 'translateX(0)',
+            transition: 'all 0.8s ease-out'
+          });
+        }
+      });
+    }
+
+    $(window).on('scroll load', showOnScroll);
+  });
+</script>
+<?php get_footer(); ?>
